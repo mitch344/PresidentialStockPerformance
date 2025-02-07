@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify
 import yfinance as yf
 import pandas as pd
@@ -40,4 +41,5 @@ def get_stock_data():
         return jsonify({"error": "An error occurred while fetching stock data"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 4000))  # Use Render's PORT variable
+    app.run(host="0.0.0.0", port=port)
