@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Stock Index Performance by Presidential Term</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1>Stock Market Performance Comparison</h1>
+            
+            <div class="controls-container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="select-group">
+                            <label class="select-label" for="stockSelect">Choose Index:</label>
+                            <select class="form-select" id="stockSelect">
+                                <option value="^GSPC">S&P 500</option>
+                                <option value="^IXIC">NASDAQ</option>
+                                <option value="^DJI">Dow Jones</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+                        <div class="select-group">
+                            <label class="select-label" for="presidentSelect1">Select President 1:</label>
+                            <select class="form-select" id="presidentSelect1">
+                                <option value="trump_term2">Donald Trump (2025-Present)</option>
+                                <option value="biden_term1">Joe Biden (2021-2025)</option>
+                                <option value="trump_term1">Donald Trump (2017-2021)</option>
+                                <option value="obama_term2">Barack Obama (2013-2017)</option>
+                                <option value="obama_term1">Barack Obama (2009-2013)</option>
+                                <option value="bush_term2">George W. Bush (2005-2009)</option>
+                                <option value="bush_term1">George W. Bush (2001-2005)</option>
+                                <option value="clinton_term2">Bill Clinton (1997-2001)</option>
+                                <option value="clinton_term1">Bill Clinton (1993-1997)</option>
+                                <option value="hw_bush_term1">George H.W. Bush (1989-1993)</option>
+                                <option value="reagan_term2">Ronald Reagan (1985-1989)</option>
+                                <option value="reagan_term1">Ronald Reagan (1981-1985)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="select-group">
+                            <label class="select-label" for="presidentSelect2">Select President 2:</label>
+                            <select class="form-select" id="presidentSelect2">
+                                <option value="trump_term2">Donald Trump (2025-Present)</option>
+                                <option value="biden_term1">Joe Biden (2021-2025)</option>
+                                <option value="trump_term1">Donald Trump (2017-2021)</option>
+                                <option value="obama_term2">Barack Obama (2013-2017)</option>
+                                <option value="obama_term1">Barack Obama (2009-2013)</option>
+                                <option value="bush_term2">George W. Bush (2005-2009)</option>
+                                <option value="bush_term1">George W. Bush (2001-2005)</option>
+                                <option value="clinton_term2">Bill Clinton (1997-2001)</option>
+                                <option value="clinton_term1">Bill Clinton (1993-1997)</option>
+                                <option value="hw_bush_term1">George H.W. Bush (1989-1993)</option>
+                                <option value="reagan_term2">Ronald Reagan (1985-1989)</option>
+                                <option value="reagan_term1">Ronald Reagan (1981-1985)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-compare" onclick="loadStockData()">Compare Presidents</button>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="stockChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/config.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+</body>
+</html>
