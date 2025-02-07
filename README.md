@@ -1,9 +1,7 @@
 # Presidential Stock Performance  
-
-[Live Demo](https://presidentialstockpeformance.onrender.com)  
+[Live Demo 🚀](https://presidentialstockpeformance.onrender.com)  
 
 Compare U.S. stock market performance for major indices across different presidencies.  
-
 ### Features  
 - Real-time stock data  
 - Supports major indices  
@@ -13,4 +11,5 @@ Compare U.S. stock market performance for major indices across different preside
 - Flask  
 - Yahoo Finance API  
 - HTML, CSS, JavaScript  
-- Render
+
+![Comparison Graph](img2.png)  
