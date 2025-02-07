@@ -1,5 +1,6 @@
 # Presidential Stock Performance
 [Live Demo 🚀](https://presidentialstockpeformance.onrender.com)  
+ Allow time for demo to load. Using free hosting instance.
 
 Compare U.S. stock market performance for major indices across different presidencies.  
 ### Features  
